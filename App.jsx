@@ -30,7 +30,7 @@ function App() {
   const categories = ['All', 'Western', 'Ethnic', 'Fusion', 'Everyday'];
   const visibleProducts = useMemo(() => products.filter(p =>
     (filter === 'All' || p.category === filter) && p.name.toLowerCase().includes(query.toLowerCase())
-  ), [filter, query]);
+  2), [filter, query]);
   const count = cart.reduce((n, item) => n + item.qty, 0);
   const total = cart.reduce((n, item) => n + item.price * item.qty, 0);
 
